@@ -42,5 +42,5 @@ This will run the website on local host. Open ```http://localhost:<port>``` or a
 - [@chinmayraj28](https://github.com/chinmayraj28)
 
 
-![Image](https://i.ibb.co/3zjQQ4P/VSA-Homework-Hub-removebg-preview.png)
+![Image](views/imgs/VSA_Homework_Hub-removebg-preview.png)
 
