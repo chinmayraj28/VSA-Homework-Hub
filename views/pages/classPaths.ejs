@@ -1,0 +1,35 @@
+<%- include('../common/head')%>
+<body data-bs-theme="dark" style="font-family: 'Poppins', sans-serif;">
+    <header>
+        <link rel="stylesheet" href="../css/style2.css">
+        <link rel="stylesheet" href="../css/style.css">
+        <%- include('../common/navbar', {classes: classArray})%>
+    </header>
+    <main>
+        <div class="container">
+            <h1 style="text-align: center; padding-bottom: 2rem; padding-top: 2rem; margin:auto;">Class: <%= className%></h1>
+            <div class="row">
+              <% for(let i = 0; i < subjects.length; i++) { %>
+                  <div class="col-md-4 mb-4"> 
+                      <div class="card" style="width: 20rem; margin:auto;">
+                          <div class="card-body">
+                              <div class="subject-info">
+                                  <div class="tiny-image-container">
+                                      <img src="<%= subjectsWithInfo[i].img %>" class="tiny-image" alt="<%= subjects[i] %> Icon" style="background-color: #<%= subjectsWithInfo[i].colorCode %>; border-radius: 20%;">
+                                  </div>
+                                  <h5 class="card-title" style="padding: 2.5px 5px; margin-top: 10px;"><%= subjects[i] %> - <%= subjectsWithInfo[i].subjectCode %></h5>
+                                  <a href="/<%= className %>/<%= subjects[i] %>" class="btn btn-primary btn-sm">View</a>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              <% } %>
+          </div>
+        </div>
+    </main>
+    <footer>
+        <%- include('../common/footer')%>
+    </footer>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</body>

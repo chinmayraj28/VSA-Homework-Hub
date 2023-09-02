@@ -1,0 +1,16 @@
+.subject-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .tiny-image {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+  }
+
+  .tiny-image-container {
+    display: inline-block;
+    padding: 5px;
+    border-radius: 50%;
+}

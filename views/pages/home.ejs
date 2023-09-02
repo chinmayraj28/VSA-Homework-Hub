@@ -1,0 +1,87 @@
+<%- include('../common/head')%>
+<body data-bs-theme="dark" style="font-family: 'Poppins', sans-serif;">
+    <header>
+        <link rel="stylesheet" href="../css/style.css">
+        <%- include('../common/navbar', {classes: classArray})%>
+    </header>
+    <main>
+        <div class="container text-center mt-5">
+            <h1 class="display-3">VSA Homework Hub</h1>
+            <p class="lead">Experience the ease of managing your assignments and never miss a deadline again.</p>
+            <p class="lead">Head over to the navbar and choose your class.</p>
+        </div>
+
+        <!-- <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <img src="../imgs/s1.png" class="d-block w-100" alt="...">
+                    <div class="text-center">
+                        <h2 class="display-4">All Your Subjects in One Place</h2>
+                        <p class="lead">Stay organized with all your assignments at your fingertips. Click on each subject to view assignments date-wise.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <img src="../imgs/s2.png" class="d-block w-100" alt="...">
+                    <div class="text-center">
+                        <h2 class="display-4">Stay on Track</h2>
+                        <p class="lead">Lost track of assignments? Don't worry, everything is organized date-wise so you can manage your tasks effectively.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <img src="../imgs/s3.png" class="d-block w-100" alt="...">
+                    <div class="text-center">
+                        <h2 class="display-4">Assignment Details</h2>
+                        <p class="lead">Easily view the list of assignments for each subject on a specific day, ensuring you never miss a task.</p>
+                    </div>
+                </div>
+            </div> -->
+            <section class="about section " id="about">
+                <h2 class="section-title">Features</h2>
+
+                <div class="about__container bd-grid">
+                    <div class="about__img">
+                        <img src="../imgs/s1.png" alt="">
+                    </div>
+                    
+                    <div>
+                        <h2 class="about__subtitle">All Your Subjects in One Place</h2>
+                        <p class="about__text">Stay organized with all your assignments at your fingertips. Click on each subject to view assignments date-wise.</p>           
+                    </div>                                   
+                </div>
+
+                <div class="about__container bd-grid">
+                    <div class="about__img">
+                        <img src="../imgs/s2.png" alt="">
+                    </div>
+                    
+                    <div>
+                        <h2 class="about__subtitle">Stay on Track</h2>
+                        <p class="about__text">Lost track of assignments? Don't worry, everything is organized date-wise so you can manage your tasks effectively.</p>           
+                    </div>                                   
+                </div>
+
+                <div class="about__container bd-grid">
+                    <div class="about__img">
+                        <img src="../imgs/s3.png" alt="">
+                    </div>
+                    
+                    <div>
+                        <h2 class="about__subtitle">Assignment Details</h2>
+                        <p class="about__text">Easily view the list of assignments for each subject on a specific day, ensuring you never miss a task.</p>           
+                    </div>                                   
+                </div>
+
+            </section>
+        </div>
+
+        <br>
+        <br>
+    </main>
+    </div>
+    <footer>
+        <%- include('../common/footer')%>
+    </footer>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+</body>

@@ -1,0 +1,80 @@
+<%- include('../common/head')%>
+<body data-bs-theme="dark" style="font-family: 'Poppins', sans-serif;">
+    <header>
+        <%- include('../common/navbar', {classes: classArray})%>
+    </header>
+    <main>
+        <div class="container">
+            <h1 class="mt-4">Admin Dashboard</h1>
+            
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            Users with Access
+                        </div>
+                        <div class="card-body">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Role</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <% authorizedUsers.forEach(function(user) { %>
+                                        <tr>
+                                            <td><%= user.username %></td>
+                                            <td><%= user.role %></td>
+                                        </tr>
+                                    <% }) %>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            Add Assignment
+                        </div>
+                        <div class="card-body">
+                            <form id="homework-form">
+                                <select class="form-select" id="class" aria-label="Default select example">
+                                    <option selected>Class:</option>
+                                    <option value="AS-B">AS - B</option>
+                                </select>
+                                <br>
+                                <select class="form-select" id="subject" aria-label="Default select example">
+                                    <option selected>Subject:</option>
+                                    <option value="Chemistry">Chemistry</option>
+                                    <option value="Physics">Physics</option>
+                                    <option value="Biology">Biology</option>
+                                    <option value="Mathematics">Mathematics</option>
+                                    <option value="English">English</option>
+                                    <option value="Computer-Science">Computer Science</option>
+                                    <option value="Economics">Economics</option>
+                                </select>
+                                <br>
+                                <label for="assignment-h" class="form-label">Assignment Heading:</label>
+                                <input type="text" class="form-control" id="assignment-h" name="assignment-h" required>
+                                <label for="assignment-d" class="form-label">Assignment Details:</label>
+                                <input type="text" class="form-control" id="assignment-d" name="assignment-d" required>
+                                <label for="assignment-date" class="form-label">Assignment Due Date:</label>
+                                <input type="date" class="form-control" id="assignment-date" name="assignment-date" required>
+                                <br>
+                                <button type="submit" class="btn btn-primary">Add</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <%- include('../common/footer')%>
+    </footer>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="../js/addAssignment.js"></script>
+</body>

@@ -1,0 +1,34 @@
+<%- include('../common/head')%>
+<body data-bs-theme="dark" style="font-family: 'Poppins', sans-serif;">
+    <header>
+        <link rel="stylesheet" href="../css/style2.css">
+        <link rel="stylesheet" href="../css/style.css">
+        <%- include('../common/navbar', {classes: classArray})%>
+    </header>
+    <main>
+        <div class="container">
+
+            <h1 style="text-align: center; padding-bottom: 2rem; padding-top: 2rem; margin:auto;"><%=className%> - <%=subjectName%></h1>
+            <div class="row">
+                <% dates.forEach(function(d, index) { %>
+                    <div class="col-md-4 mb-4"> 
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <h5 class="card-title"><%=d%></h5>
+                                <a href="/<%=className%>/<%=subjectName%>/<%=d%>" class="btn btn-primary">View</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <% if ((index + 1) % 5 === 0) { %>
+                        </div><div class="row">
+                    <% } %> -->
+                <% }) %>
+            </div>
+
+        </div>
+    </main>
+    <footer>
+        <%- include('../common/footer')%>
+    </footer>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</body>
