@@ -27,7 +27,7 @@ async function isAdminAuthorized(req, res, next) {
   }
 
   if (idx !== undefined && dbContent[idx].password === password) {
-    if (dbContent[idx].role === 1) {  
+    if (dbContent[idx].role === "1") {  
       req.isNormalAdmin = true;  
     } else {
       req.isNormalAdmin = false; 
