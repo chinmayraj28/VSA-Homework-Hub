@@ -241,8 +241,3 @@ app.get('/:className/:subjectName/:dateName', async (req, res) => {
 app.listen(port, () => {
   console.log(`Server is running on port ${port}.\nhttp://localhost:${port}`);
 });
-
-// const server = app.listen(port, '0.0.0.0', () => {
-//     const host = server.address().address;
-//     console.log(`Server is running on http://${host}:${port}`);
-// });
