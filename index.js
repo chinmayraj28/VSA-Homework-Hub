@@ -74,31 +74,6 @@ app.get('/', async (req, res) => {
   }
 });
 
-// app.get('/addshit', async (req, res) => {
-  // const data = req.body
-
-//     // subject: data.subject,
-//     // img: data.img,
-//     // subjectCode: data.subjectCode,
-//     // colorCode: data.colorCode
-
-//   let path = fb.ref('/users')
-//   const snapshot = await path.once('value');
-//   const existingData = snapshot.val();
-//   if(existingData){
-//     if(Array.isArray(existingData)){
-//       existingData.push(data)
-//       await path.set(existingData)
-//     }else{
-//       await path.set([existingData, data])
-//     }
-//   }else{
-//     await path.set([data])
-//   }
-
-//   res.status(200).json({ success: "succk my dick 🤩🤩 (posted)"})
-// })
-
 app.get('/admin', isAdminAuthorized, async (req, res) => {
   const arrayOfClasses = await util.getClasses(fb)
   const userDetails = await util.getUsers(fb)
